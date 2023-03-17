@@ -3,7 +3,7 @@
 
 Console.WriteLine("Inserisci la lunghezza dell'array");
 int n = Convert.ToInt32(Console.ReadLine());
-   
+
 int[] ArrayInteri2 = new int[n];
 
 for (int i = 0; i < n; i++)
@@ -50,7 +50,7 @@ string arrayToString(int[] array)
 int QuadratoArray(int number)
 {
     return number * number;
-     
+
 }
 
 
@@ -66,10 +66,10 @@ printArray(arrayAlQuadrato);
 
 int[] ElevaArrayAlQuadrato(int[] array)
 {
-    int[] secondArray = (int[]) array.Clone();
-    for (int i = 0;i < secondArray.Length; i++)
+    int[] secondArray = (int[])array.Clone();
+    for (int i = 0; i < secondArray.Length; i++)
     {
-      secondArray[i] = QuadratoArray(secondArray[i]);
+        secondArray[i] = QuadratoArray(secondArray[i]);
     }
     return secondArray;
 }
@@ -82,7 +82,7 @@ Console.WriteLine(sommaArray);
 int sommaElementiArray(int[] array)
 {
     int somma = 0;
-    for (int i = 0; i < array.Length; i++) 
+    for (int i = 0; i < array.Length; i++)
     {
         somma += array[i];
     }
