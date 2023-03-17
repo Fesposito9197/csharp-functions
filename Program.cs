@@ -2,9 +2,8 @@
 
 
 Console.WriteLine("Inserisci la lunghezza dell'array");
-var n = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
    
-Console.WriteLine("Stampo l'array");
 int[] ArrayInteri2 = new int[n];
 
 for (int i = 0; i < n; i++)
@@ -13,13 +12,14 @@ for (int i = 0; i < n; i++)
     ArrayInteri2[i] = Convert.ToInt32(Console.ReadLine());
 }
 
+Console.WriteLine("Stampo l'array");
 printArray(ArrayInteri2);
 
+//Funzione che mi stampa un array di numeri interi
 void printArray(int[] array)
 {
     Console.WriteLine(arrayToString(array));
 }
-//Funzione che mi stampa un array di numeri interi
 string arrayToString(int[] array)
 {
     var result = "[";
@@ -57,7 +57,7 @@ int QuadratoArray(int number)
 
 
 //Funzione che dato un array di numeri interi restituisce un nuovo array con i numeri al quadrat
-var arrayAlQuadrato = ElevaArrayAlQuadrato(ArrayInteri2);
+int[] arrayAlQuadrato = ElevaArrayAlQuadrato(ArrayInteri2);
 Console.WriteLine("Stampo array originale");
 printArray(ArrayInteri2);
 Console.WriteLine("Stampo l'array clone con i numeri elevati al quadrato");
