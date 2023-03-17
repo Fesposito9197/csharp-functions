@@ -1,4 +1,4 @@
-﻿
+﻿Console.WriteLine("Stampo l'array");
 printArray(new[] { 2, 6, 7, 5, 3, 9 });
 
 void printArray(int[] array)
@@ -23,4 +23,16 @@ string arrayToString(int[] array)
     result += "]";
 
     return result;
+}
+
+
+
+Console.WriteLine("Stampo il numero elevato al quadrato");
+var numeroAlQuadrato = Quadrato(2);
+Console.WriteLine(numeroAlQuadrato);
+
+int Quadrato(int number)
+{
+    return number * number;
+     
 }
