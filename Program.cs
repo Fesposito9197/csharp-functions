@@ -43,10 +43,13 @@ int QuadratoArray(int number)
 
 
 
-//Funzione che dato un array di numeri interi restituisce un nuovo array con i numeri al quadrato
-Console.WriteLine("Stampo l'array con i numeri elevati al quadrato");
+//Funzione che dato un array di numeri interi restituisce un nuovo array con i numeri al quadrat
 var arrayAlQuadrato = ElevaArrayAlQuadrato(ArrayInteri);
+Console.WriteLine("Stampo array originale");
+printArray(ArrayInteri);
+Console.WriteLine("Stampo l'array clone con i numeri elevati al quadrato");
 printArray(arrayAlQuadrato);
+
 
 int[] ElevaArrayAlQuadrato(int[] array)
 {
@@ -57,3 +60,23 @@ int[] ElevaArrayAlQuadrato(int[] array)
     }
     return secondArray;
 }
+
+//Funzione che preso un array di numeri interi restituisce la somma totale degli elementi
+Console.WriteLine("Stampo l'array con la somma totale degli elementi");
+var sommaArray = sommaElementiArray(ArrayInteri);
+Console.WriteLine(sommaArray);
+
+int sommaElementiArray(int[] array)
+{
+    int somma = 0;
+    for (int i = 0; i < array.Length; i++) 
+    {
+        somma += array[i];
+    }
+    return somma;
+}
+
+
+Console.WriteLine("Stampo la somma degli elementi dell'array dove gli elementi sono elevati al quadrato");
+var sommaArrayAlQuadrato = sommaElementiArray(arrayAlQuadrato);
+Console.WriteLine(sommaArrayAlQuadrato);
