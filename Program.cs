@@ -1,5 +1,6 @@
 ﻿Console.WriteLine("Stampo l'array");
-printArray(new[] { 2, 6, 7, 5, 3, 9 });
+var ArrayInteri = new[] { 2, 6, 7, 5, 3, 9 };
+printArray(ArrayInteri);
 
 void printArray(int[] array)
 {
@@ -27,12 +28,32 @@ string arrayToString(int[] array)
 
 
 
+
+//Funzione che prende un numero e lo eleva al quadrato
 Console.WriteLine("Stampo il numero elevato al quadrato");
-var numeroAlQuadrato = Quadrato(2);
+var numeroAlQuadrato = QuadratoArray(2);
 Console.WriteLine(numeroAlQuadrato);
 
-int Quadrato(int number)
+int QuadratoArray(int number)
 {
     return number * number;
      
+}
+
+
+
+
+//Funzione che dato un array di numeri interi restituisce un nuovo array con i numeri al quadrato
+Console.WriteLine("Stampo l'array con i numeri elevati al quadrato");
+var arrayAlQuadrato = ElevaArrayAlQuadrato(ArrayInteri);
+printArray(arrayAlQuadrato);
+
+int[] ElevaArrayAlQuadrato(int[] array)
+{
+    int[] secondArray = (int[]) array.Clone();
+    for (int i = 0;i < secondArray.Length; i++)
+    {
+      secondArray[i] = QuadratoArray(secondArray[i]);
+    }
+    return secondArray;
 }
