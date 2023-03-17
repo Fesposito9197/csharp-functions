@@ -1,10 +1,10 @@
-﻿Console.WriteLine("Stampo l'array");
-//var ArrayInteri = new[] { 2, 6, 7, 5, 3, 9 };
+﻿//var ArrayInteri = new[] { 2, 6, 7, 5, 3, 9 };
 
 
 Console.WriteLine("Inserisci la lunghezza dell'array");
 var n = Convert.ToInt32(Console.ReadLine());
    
+Console.WriteLine("Stampo l'array");
 int[] ArrayInteri2 = new int[n];
 
 for (int i = 0; i < n; i++)
